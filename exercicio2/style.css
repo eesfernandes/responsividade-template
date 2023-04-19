@@ -1,0 +1,29 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+main {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    height: 400px;
+}
+
+section {
+    border: black solid 1px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+@media screen and (max-device-width: 480px) {
+    main {
+        display: flex;
+        flex-direction: column;
+    }
+
+    section {
+        height: 200px;
+    }
+}

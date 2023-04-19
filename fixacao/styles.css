@@ -3,8 +3,15 @@
     margin: 0;
     font-family: Helvetica, sans-serif;
   }
+
+  body {
+    display: flex;
+    flex-direction: column;
+  }
   
   header {
+    position: sticky;
+    top: 0;
     background-color: #4986b8;
     color: white;
     height: 40px;
@@ -13,11 +20,11 @@
   }
   
   main {
-    height: 77vh;
+    margin: 10px auto;
+    height: 100vh;
     max-width: 800px;
     display: flex;
     flex-direction: row;
-    margin: 20px auto;
     gap: 10px;
   }
   
@@ -38,11 +45,21 @@
     background-color: mistyrose;
   }
   
-  footer {
-    position: absolute;
-    bottom: 0;
+  footer {  
     background-color: black;
     color: white;
     padding: 20px;
     width: 100%;
+  }
+
+  @media screen and (max-width: 480px) {
+    main {
+      display: flex;
+      flex-direction: column;
+      margin-bottom: 150px;
+    }
+
+    footer {
+      flex-shrink: ;
+    }
   }
